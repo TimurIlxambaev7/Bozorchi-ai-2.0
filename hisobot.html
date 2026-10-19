@@ -1,85 +1,93 @@
+
 <!DOCTYPE html>
 <html lang="uz">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Bozorchi AI — Savdo hisoboti</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;1,9..144,300&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hisobotlar — Bozorchi AI</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header>
-  <div class="bar">
-    <a class="logo" href="index.html"><i class="dot"></i>Bozor<span>chi</span> AI</a>
-    <nav>
-      <a href="index.html">Bosh sahifa</a>
-      <a href="mahsulotlar.html">Mahsulotlar</a>
-      <a class="active" href="hisobot.html">Savdo hisoboti</a>
-      <a href="ai-yordamchi.html">AI yordamchi</a>
-      <a href="aloqa.html">Aloqa</a>
-    </nav>
-  </div>
-</header>
+<header><div class="container nav">
+  <a class="logo" href="index.html">🟢 Bozorchi AI</a>
+  <nav>
+    <a href="index.html">Bosh sahifa</a>
+    <a href="mahsulotlar.html">Mahsulotlar</a>
+    <a class="active" href="hisobotlar.html">Hisobotlar</a>
+    <a href="ai-yordamchi.html">AI yordamchi</a>
+    <a href="aloqa.html">Aloqa</a>
+  </nav>
+</div></header>
 
-<main>
-  <section class="hero">
-    <div>
-      <h1>
-        <span class="l"><span>Bugungi foyda</span></span>
-        <span class="l"><span class="g">aniq ko'rinadi</span></span>
-      </h1>
-      <p class="lead fade d3">Kunlik savdo, jami tushum, mahsulot tannarxi va taxminiy foyda avtomatik hisoblanadi. Kechqurun kassani sanab o'tirish shart emas.</p>
+<main class="container">
+  <section class="page-heading">
+    <span class="eyebrow">BIZNES TAHLILI</span>
+    <h1>Savdo <span class="green">hisobotlari.</span></h1>
+    <p>Namuna savdo ko‘rsatkichlari, xarajatlar va foyda. Bu sahifada JavaScript ishlatilmaydi.</p>
+  </section>
+
+  <div class="grid stats-grid">
+    <div class="stat"><span>Jami savdo</span><strong>2 450 000</strong><small>so‘m</small></div>
+    <div class="stat"><span>Jami xarajat</span><strong>1 680 000</strong><small>so‘m</small></div>
+    <div class="stat"><span>Taxminiy foyda</span><strong class="green">770 000</strong><small>so‘m · savdo − xarajat</small></div>
+  </div>
+
+  <section class="report-grid">
+    <div class="panel">
+      <div class="panel-head"><div><span class="eyebrow">7 KUNLIK TAHLIL</span><h2>Kunlik savdo</h2></div><span class="tag">SO‘M</span></div>
+      <div class="chart">
+        <div class="chart-col"><span class="value">280k</span><div class="bar" style="--h:45%"></div><span class="day">Du</span></div>
+        <div class="chart-col"><span class="value">350k</span><div class="bar" style="--h:58%"></div><span class="day">Se</span></div>
+        <div class="chart-col"><span class="value">310k</span><div class="bar" style="--h:51%"></div><span class="day">Ch</span></div>
+        <div class="chart-col"><span class="value">420k</span><div class="bar" style="--h:70%"></div><span class="day">Pa</span></div>
+        <div class="chart-col"><span class="value">390k</span><div class="bar" style="--h:65%"></div><span class="day">Ju</span></div>
+        <div class="chart-col"><span class="value">460k</span><div class="bar today" style="--h:77%"></div><span class="day">Sh</span></div>
+        <div class="chart-col"><span class="value">240k</span><div class="bar" style="--h:40%"></div><span class="day">Ya</span></div>
+      </div>
+      <div class="legend"><span>🟩 Kunlik tushum</span><span>Eng yuqori: 460 000</span></div>
     </div>
-    <div class="visual">
-      <div class="imgwrap"><img src="https://picsum.photos/600/400" alt="Savdo hisoboti"></div>
+
+    <div class="panel">
+      <div class="panel-head"><div><span class="eyebrow">XARAJATLAR</span><h2>Xarajatlar taqsimoti</h2></div></div>
+      <div class="expense">
+        <div class="expense-top"><span>Mahsulot xaridi</span><strong>1 050 000</strong></div>
+        <div class="track"><span style="--w:63%"></span></div>
+      </div>
+      <div class="expense">
+        <div class="expense-top"><span>Ijara</span><strong>350 000</strong></div>
+        <div class="track"><span style="--w:21%"></span></div>
+      </div>
+      <div class="expense">
+        <div class="expense-top"><span>Kommunal to‘lovlar</span><strong>180 000</strong></div>
+        <div class="track"><span style="--w:11%"></span></div>
+      </div>
+      <div class="expense">
+        <div class="expense-top"><span>Boshqa xarajatlar</span><strong>100 000</strong></div>
+        <div class="track"><span style="--w:6%"></span></div>
+      </div>
+      <p class="note">Jami xarajat: 1 680 000 so‘m.</p>
     </div>
   </section>
 
-  <div class="stats rv">
-    <div class="stat"><span class="num" style="--t:886"></span><p>ming so'm jami tushum</p></div>
-    <div class="stat"><span class="num" style="--t:728"></span><p>ming so'm tannarx</p></div>
-    <div class="stat"><span class="num" style="--t:158"></span><p>ming so'm taxminiy foyda</p></div>
-  </div>
-
-  <div class="panel">
-    <div class="box rv">
-      <h3>Mahsulot bo'yicha foyda (ming so'm)</h3>
-      <div class="chart">
-        <div class="col" style="--h:70%;--d:.3s"><b>28</b><i></i><span>Sut</span></div>
-        <div class="col" style="--h:60%;--d:.45s"><b>24</b><i></i><span>Tuxum</span></div>
-        <div class="col" style="--h:75%;--d:.6s"><b>30</b><i></i><span>Guruch</span></div>
-        <div class="col" style="--h:90%;--d:.75s"><b>36</b><i></i><span>Choy</span></div>
-        <div class="col" style="--h:100%;--d:.9s"><b>40</b><i></i><span>Cola</span></div>
+  <section class="section">
+    <div class="panel">
+      <span class="eyebrow">SAVDO YOZUVLARI</span>
+      <h2>So‘nggi operatsiyalar</h2>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Mahsulot</th><th>Sana</th><th>Miqdor</th><th>Tushum</th><th>Holat</th></tr></thead>
+          <tbody>
+            <tr><td>Non</td><td>19.10.2026</td><td>20 dona</td><td>80 000 so‘m</td><td><span class="status">Hisoblangan</span></td></tr>
+            <tr><td>Sut</td><td>19.10.2026</td><td>10 dona</td><td>120 000 so‘m</td><td><span class="status">Hisoblangan</span></td></tr>
+            <tr><td>Olma</td><td>18.10.2026</td><td>12 kg</td><td>120 000 so‘m</td><td><span class="status">Hisoblangan</span></td></tr>
+            <tr><td>Guruch</td><td>18.10.2026</td><td>8 kg</td><td>144 000 so‘m</td><td><span class="status">Hisoblangan</span></td></tr>
+          </tbody>
+        </table>
       </div>
     </div>
-    <div class="box ringbox rv">
-      <h3>Foyda ulushi</h3>
-      <div class="ring"><b>18%</b></div>
-      <p>Tushumning 18 foizi sof foyda bo'lib qoldi.</p>
-    </div>
-  </div>
-
-  <div class="tw rv">
-    <table>
-      <thead>
-        <tr><th>Mahsulot</th><th>Sotildi</th><th>Tushum</th><th>Tannarx</th><th>Foyda</th></tr>
-      </thead>
-      <tbody>
-        <tr><td>Sut</td><td>14 dona</td><td>154 000</td><td>126 000</td><td>28 000</td></tr>
-        <tr><td>Tuxum</td><td>8 dona</td><td>152 000</td><td>128 000</td><td>24 000</td></tr>
-        <tr><td>Guruch</td><td>10 dona</td><td>200 000</td><td>170 000</td><td>30 000</td></tr>
-        <tr><td>Choy</td><td>12 dona</td><td>180 000</td><td>144 000</td><td>36 000</td></tr>
-        <tr><td>Cola</td><td>20 dona</td><td>200 000</td><td>160 000</td><td>40 000</td></tr>
-      </tbody>
-    </table>
-  </div>
+  </section>
+  <p class="note">Muhim: grafik va hisobotlar endi sahifada ko‘rinadi, ammo qiymatlar namuna ma’lumotlaridir. Ular avtomatik hisoblanishi uchun backend yoki JavaScript qo‘shish kerak bo‘ladi.</p>
 </main>
-
-<footer>
-  <p>© 2026 Bozorchi AI — kichik do'konlar uchun</p>
-  <p><a href="aloqa.html">Savol yoki taklif yuborish</a></p>
-</footer>
+<footer><div class="container footer-row"><a class="logo" href="index.html">🟢 Bozorchi AI</a><p>Kichik biznes uchun aqlli boshqaruv.</p><span>© 2026 Bozorchi AI</span></div></footer>
 </body>
 </html>
