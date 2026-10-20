@@ -76,4 +76,142 @@
       <div class="cards">
         <a class="card" href="mahsulotlar.html">
           <div class="emoji">📦</div>
-          <h
+          
+          <h3>Mahsulotlarni boshqarish</h3>
+          <p>Mahsulotlaringizni katalogga qo‘shing, narxlarini belgilang va ombordagi qoldiqlarni kuzating.</p>
+          <b>Mahsulotlarni ko‘rish →</b>
+        </a>
+
+        <a class="card" href="savdo.html">
+          <div class="emoji">🛒</div>
+          <h3>Savdoni qayd etish</h3>
+          <p>Har bir savdoni kiriting, miqdor va narxni hisoblang hamda tushumni nazorat qiling.</p>
+          <b>Yangi savdo →</b>
+        </a>
+
+        <a class="card" href="hisobot.html">
+          <div class="emoji">📊</div>
+          <h3>Hisobot va tahlil</h3>
+          <p>Savdo natijalarini ko‘ring, daromadni tahlil qiling va biznesingiz holatini baholang.</p>
+          <b>Hisobotni ochish →</b>
+        </a>
+      </div>
+    </section>
+
+    <section class="wrap section">
+      <div class="section-title">
+        <div>
+          <span class="tag">AQLLI YORDAMCHI</span>
+          <h2>Bozorchi AI tavsiya beradi</h2>
+        </div>
+        <p>Do‘koningizni tartibli boshqarish uchun foydali eslatmalar.</p>
+      </div>
+
+      <div class="cards">
+        <article class="card">
+          <div class="emoji">💡</div>
+          <h3>Foydani kuzating</h3>
+          <p>Sotish narxini xarid narxi bilan taqqoslab, qaysi mahsulot ko‘proq foyda keltirayotganini aniqlang.</p>
+        </article>
+
+        <article class="card">
+          <div class="emoji">📦</div>
+          <h3>Omborni nazorat qiling</h3>
+          <p>Mahsulot qoldiqlarini muntazam tekshiring va tugab qolishi mumkin bo‘lgan mahsulotlarni oldindan belgilang.</p>
+        </article>
+
+        <article class="card">
+          <div class="emoji">📈</div>
+          <h3>Savdo natijalarini tahlil qiling</h3>
+          <p>Saqlangan savdolarni hisobot orqali kuzatib, biznesingiz uchun yaxshiroq qarorlar qabul qiling.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="wrap section">
+      <div class="section-title">
+        <div>
+          <span class="tag">TEZKOR KIRISH</span>
+          <h2>Ishni davom ettiring</h2>
+        </div>
+      </div>
+
+      <div class="cards">
+        <a class="card" href="savdo.html">
+          <div class="emoji">➕</div>
+          <h3>Yangi savdo qo‘shish</h3>
+          <p>Mahsulot sotuvini qayd etish uchun savdo sahifasiga o‘ting.</p>
+          <b>Savdoni boshlash →</b>
+        </a>
+
+        <a class="card" href="mahsulotlar.html">
+          <div class="emoji">🧺</div>
+          <h3>Mahsulotlarni tekshirish</h3>
+          <p>Katalogdagi mahsulotlarni ko‘rish va boshqarish.</p>
+          <b>Katalogni ochish →</b>
+        </a>
+
+        <a class="card" href="hisobot.html">
+          <div class="emoji">🧾</div>
+          <h3>Hisobotni ko‘rish</h3>
+          <p>Saqlangan savdolar va hisob-kitoblar bilan tanishing.</p>
+          <b>Hisobotga o‘tish →</b>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <a class="logo" href="index.html">🛍️ Bozorchi <b>AI</b></a>
+      <p style="margin: 10px 0;">Kichik biznes uchun aqlli yordamchi.</p>
+      <small>© 2026 Bozorchi AI · Demo loyiha</small>
+    </div>
+  </footer>
+
+  <script>
+    // Saqlangan savdolarni o‘qish.
+    // Boshqa sahifalardagi localStorage kaliti bilan bir xil bo‘lishi kerak.
+    function updateDashboard() {
+      let sales = [];
+
+      try {
+        const saved = localStorage.getItem("sales");
+        sales = saved ? JSON.parse(saved) : [];
+
+        if (!Array.isArray(sales)) {
+          sales = [];
+        }
+      } catch (error) {
+        sales = [];
+      }
+
+      const revenue = sales.reduce((sum, sale) => {
+        return sum + Number(
+          sale.total ?? sale.amount ?? sale.summa ?? 0
+        );
+      }, 0);
+
+      const profit = sales.reduce((sum, sale) => {
+        return sum + Number(sale.profit ?? 0);
+      }, 0);
+
+      document.getElementById("homeRevenue").textContent =
+        revenue.toLocaleString("uz-UZ") + " so‘m";
+
+      document.getElementById("homeCount").textContent =
+        sales.length + " ta";
+
+      document.getElementById("homeProfit").textContent =
+        profit.toLocaleString("uz-UZ") + " so‘m";
+    }
+
+    updateDashboard();
+
+    // Boshqa sahifada savdo saqlanib, shu sahifaga qaytilsa yangilaydi.
+    window.addEventListener("pageshow", updateDashboard);
+
+    window.addEventListener("storage", updateDashboard);
+  </script>
+</body>
+</html>
