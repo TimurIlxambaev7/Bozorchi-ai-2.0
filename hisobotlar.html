@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="uz">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hisobot — Bozorchi AI</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <a class="logo" href="index.html">🛍️ Bozorchi <b>AI</b></a>
+    <nav>
+      <a href="index.html">Bosh sahifa</a>
+      <a href="mahsulotlar.html">Mahsulotlar</a>
+      <a href="savdo.html">Savdo</a>
+      <a class="active" href="hisobot.html">Hisobot</a>
+    </nav>
+  </header>
+
+  <main class="wrap page">
+    <div class="page-title">
+      <div>
+        <span class="tag">BIZNES TAHLILI</span>
+        <h1>Hisobotlar</h1>
+        <p>Saqlangan savdolar asosida avtomatik hisoblanadi.</p>
+      </div>
+      <button id="clearSales" class="btn danger" type="button">
+        Savdolarni tozalash
+      </button>
+    </div>
+
+    <div class="stats">
+      <article class="stat">
+        <span>Jami tushum</span>
+        <strong id="reportRevenue">0 so‘m</strong>
+        <small>Barcha savdolar</small>
+      </article>
+      <article class="stat">
+        <span>Taxminiy foyda</span>
+        <strong id="reportProfit">0 so‘m</strong>
+        <small>Sotish narxi − xarid narxi</small>
+      </article>
+      <article class="stat">
+        <span>Savdolar soni</span>
+        <strong id="reportCount">0 ta</strong>
+        <small>Yozuvlar soni</small>
+      </article>
+      <article class="stat">
+        <span>Eng ko‘p sotilgan</span>
+        <strong id="topProduct">—</strong>
+        <small>Mahsulot bo‘yicha</small>
+      </article>
+    </div>
+
+    <section class="panel report-panel">
+      <div class="section-title">
+        <div>
+          <h2>Oxirgi 7 kun savdosi</h2>
+          <p>Har bir ustun shu kuni kiritilgan savdo summasini ko‘rsatadi.</p>
+        </div>
+      </div>
+      <div id="weeklyChart" class="chart"></div>
+    </section>
+
+    <section class="panel table-panel">
+      <h2>Barcha savdolar</h2>
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th>Sana</th>
+              <th>Mahsulot</th>
+              <th>Miqdor</th>
+              <th>Jami</th>
+              <th>Foyda</th>
+              <th>To‘lov</th>
+            </tr>
+          </thead>
+          <tbody id="allSales"></tbody>
+        </table>
+      </div>
+      <p id="reportEmpty" class="hint">
+        Hisobot yaratish uchun avval savdo sahifasida savdo kiriting.
+      </p>
+    </section>
+  </main>
+
+  <footer>© 2026 Bozorchi AI · Demo loyiha</footer>
+  <script src="app.js"></script>
+</body>
+</html>

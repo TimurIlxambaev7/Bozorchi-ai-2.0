@@ -1,43 +1,79 @@
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="uz">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Bozorchi AI — Aqlli do‘kon</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bozorchi AI — Bosh sahifa</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header><div class="container nav">
-<a class="logo" href="index.html">🟢 Bozorchi <span>AI</span></a>
-<nav><a class="active" href="index.html">Bosh sahifa</a><a href="mahsulotlar.html">Mahsulotlar</a><a href="savdo.html">Savdo</a><a href="hisobotlar.html">Hisobotlar</a><a href="ai-yordamchi.html">AI yordamchi</a><a href="aloqa.html">Aloqa</a></nav>
-</div></header>
-<main>
-<section class="container hero">
-<div>
-<div class="eyebrow">Kichik biznes uchun aqlli yechim</div>
-<h1>Do‘koningizni <span class="green">aqlli</span> boshqaring.</h1>
-<p>Savdo, mahsulotlar, xarajatlar va foydani bir joyda kuzating. Bozorchi AI kichik do‘kon egalariga hisob-kitobni osonlashtirishga yordam beradi.</p>
-<a class="btn" href="hisobotlar.html">Hisobotni ko‘rish ↗</a>
-<a class="btn secondary" href="mahsulotlar.html">Mahsulotlar</a>
-<div class="stats">
-<div class="stat"><small>Hisob-kitob</small><strong>Oson</strong></div>
-<div class="stat"><small>Ma’lumotlar</small><strong>Bir joyda</strong></div>
-</div>
-</div>
-<img src="https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=1100&q=85" alt="Yangi sabzavot va mevalar sotiladigan do‘kon">
-</section>
-<section class="container section">
-<div class="page-head"><div class="eyebrow">Asosiy imkoniyatlar</div><h2>Biznesingiz uchun <span class="green">qulay vositalar</span></h2><p>Do‘kon ishlarini tartibli boshqarish uchun bir nechta asosiy bo‘lim.</p></div>
-<div class="grid">
-<article class="card"><div class="card-body"><div class="icon">📦</div><h3>Mahsulotlar</h3><p>Tovarlar va narxlar katalogini ko‘ring.</p><a class="btn secondary" href="mahsulotlar.html">Ochish →</a></div></article>
-<article class="card"><div class="card-body"><div class="icon">🧾</div><h3>Savdo</h3><p>Savdo yozuvlari uchun demo shakl.</p><a class="btn secondary" href="savdo.html">Ochish →</a></div></article>
-<article class="card"><div class="card-body"><div class="icon">📈</div><h3>Hisobotlar</h3><p>Tushum, xarajat va foyda ko‘rsatkichlari.</p><a class="btn secondary" href="hisobotlar.html">Ochish →</a></div></article>
-</div>
-</section>
-<section class="container section">
-<div class="cta"><div><div class="eyebrow">Bozorchi AI</div><h2>Raqamlaringizni <span class="green">tushunarli qiling.</span></h2><p>Demo loyihani bo‘limlar orqali ko‘rib chiqing.</p></div><a class="btn" href="ai-yordamchi.html">AI yordamchi ↗</a></div>
-</section>
-</main>
-<footer><div class="container footer-row"><a class="logo" href="index.html">🟢 Bozorchi <span>AI</span></a><p>© 2026 Bozorchi AI · Demo Day</p></div></footer>
-</body>
-</html>
+  <header class="header">
+    <a class="logo" href="index.html">🛍️ Bozorchi <b>AI</b></a>
+    <nav>
+      <a class="active" href="index.html">Bosh sahifa</a>
+      <a href="mahsulotlar.html">Mahsulotlar</a>
+      <a href="savdo.html">Savdo</a>
+      <a href="hisobot.html">Hisobot</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero wrap">
+      <div>
+        <span class="tag">KICHIK BIZNES UCHUN</span>
+        <h1>Savdongizni <span>aqlli boshqaring.</span></h1>
+        <p>Mahsulotlar, savdo va foydani bir joyda kuzating. Bozorchi AI do‘koningizni tartibli boshqarishga yordam beradi.</p>
+        <div class="actions">
+          <a class="btn" href="savdo.html">＋ Yangi savdo</a>
+          <a class="btn secondary" href="hisobot.html">Hisobotni ko‘rish →</a>
+        </div>
+        <div class="checks">✓ Oddiy boshqaruv　 ✓ Tez hisob-kitob　 ✓ Telefon va kompyuterga mos</div>
+      </div>
+      <img class="hero-img"
+        src="https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=1100&q=85"
+        alt="Sabzavot va mevalar do‘koni">
+    </section>
+
+    <section class="wrap section">
+      <div class="section-title">
+        <div>
+          <span class="tag">BOSHQARUV PANELI</span>
+          <h2>Do‘koningiz holati</h2>
+        </div>
+        <p>Ko‘rsatkichlar siz kiritgan savdolar asosida yangilanadi.</p>
+      </div>
+      <div class="stats">
+        <article class="stat">
+          <span>Jami tushum</span>
+          <strong id="homeRevenue">0 so‘m</strong>
+          <small>Saqlangan savdolar</small>
+        </article>
+        <article class="stat">
+          <span>Jami savdolar</span>
+          <strong id="homeCount">0 ta</strong>
+          <small>Saqlangan yozuvlar</small>
+        </article>
+        <article class="stat">
+          <span>Mahsulot turlari</span>
+          <strong id="homeProducts">6 ta</strong>
+          <small>Katalogdagi mahsulotlar</small>
+        </article>
+        <article class="stat">
+          <span>Taxminiy foyda</span>
+          <strong id="homeProfit">0 so‘m</strong>
+          <small>Sotish va xarid narxi farqi</small>
+        </article>
+      </div>
+    </section>
+
+    <section class="wrap section">
+      <div class="section-title">
+        <div>
+          <span class="tag">IMKONIYATLAR</span>
+          <h2>Kerakli vositalar bir joyda</h2>
+        </div>
+      </div>
+      <div class="cards">
+        <a class="card" href="mahsulotlar.html">
+          <div class="emoji">📦</div>
+          <h

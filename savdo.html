@@ -1,40 +1,166 @@
-
 <!DOCTYPE html>
 <html lang="uz">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Savdo — Bozorchi AI</title><link rel="stylesheet" href="style.css"></head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Savdo | Bozorchi AI</title>
+  <link rel="stylesheet" href="style.css">
+</head>
 <body>
-<header><div class="container nav"><a class="logo" href="index.html">🟢 Bozorchi <span>AI</span></a><nav><a href="index.html">Bosh sahifa</a><a href="mahsulotlar.html">Mahsulotlar</a><a class="active" href="savdo.html">Savdo</a><a href="hisobotlar.html">Hisobotlar</a><a href="ai-yordamchi.html">AI yordamchi</a><a href="aloqa.html">Aloqa</a></nav></div></header>
-<main class="container">
-<div class="page-head"><div class="eyebrow">Savdo boshqaruvi</div><h1>Savdolarni <span class="green">nazorat qiling</span></h1><p>Quyida savdo yozuvlari va yangi savdoni qayd qilish uchun namuna interfeys.</p></div>
-<div class="stats">
-<div class="stat"><small>Bugungi savdo</small><strong>450 000 so‘m</strong></div>
-<div class="stat"><small>Savdolar soni</small><strong>18 ta</strong></div>
-<div class="stat"><small>O‘rtacha chek</small><strong>25 000 so‘m</strong></div>
-<div class="stat"><small>Holat</small><strong class="green">Demo</strong></div>
-</div>
-<div class="columns">
-<div class="panel">
-<h3>Yangi savdo shakli</h3>
-<form action="#" method="get">
-<div class="field"><label for="product">Mahsulot</label><select id="product" name="product"><option>Non</option><option>Sut</option><option>Sabzavotlar</option><option>Guruch</option><option>Tuxum</option><option>O‘simlik yog‘i</option></select></div>
-<div class="field"><label for="qty">Miqdor</label><input id="qty" name="qty" type="number" min="1" value="1" required></div>
-<div class="field"><label for="date">Sana</label><input id="date" name="date" type="date" required></div>
-<button class="btn" type="submit">Savdoni yuborish</button>
-</form>
-<p style="font-size:11px;margin-top:15px">Bu demo shakl. Hozircha savdoni saqlamaydi va narxni avtomatik hisoblamaydi.</p>
-</div>
-<div class="panel">
-<h3>Oxirgi savdolar</h3>
-<div class="table-wrap"><table>
-<thead><tr><th>Mahsulot</th><th>Miqdor</th><th>Jami</th></tr></thead>
-<tbody>
-<tr><td>Non</td><td>10 dona</td><td>40 000</td></tr>
-<tr><td>Sut</td><td>5 litr</td><td>60 000</td></tr>
-<tr><td>Guruch</td><td>4 kg</td><td>72 000</td></tr>
-<tr><td>Olma</td><td>3 kg</td><td>42 000</td></tr>
-</tbody></table></div>
-</div>
-</div>
+<header class="site-header">
+  <div class="wrap navbar">
+    <a class="brand" href="index.html">🛍️ Bozorchi <span class="brand-ai">AI</span></a>
+    <nav class="nav-links">
+      <a href="index.html">Bosh sahifa</a>
+      <a href="mahsulotlar.html">Mahsulotlar</a>
+      <a href="savdo.html" class="active">Savdo</a>
+      <a href="hisobot.html">Hisobot</a>
+    </nav>
+    <a class="nav-cta" href="savdo.html">Savdoni boshlash ↗</a>
+  </div>
+</header>
+
+<main class="wrap page">
+  <div class="page-heading">
+    <div>
+      <span class="eyebrow">SAVDO BOSHQARUVI</span>
+      <h1>Savdo markazi</h1>
+      <p>Savdo jarayoni va namunaviy tushum ko‘rsatkichlari.</p>
+    </div>
+    <a class="btn btn-secondary" href="mahsulotlar.html">📦 Mahsulotlar</a>
+  </div>
+
+  <div class="stats compact-stats">
+    <article class="stat">
+      <div class="stat-head">Bugungi tushum <span class="stat-icon">↗</span></div>
+      <div class="stat-value">1 250 000 <small>so‘m</small></div>
+      <p class="stat-note">Demo qiymat</p>
+    </article>
+    <article class="stat">
+      <div class="stat-head">Savdolar soni <span class="stat-icon blue">▤</span></div>
+      <div class="stat-value">36 <small>ta</small></div>
+      <p class="stat-note">Demo qiymat</p>
+    </article>
+    <article class="stat">
+      <div class="stat-head">O‘rtacha chek <span class="stat-icon amber">◈</span></div>
+      <div class="stat-value">34 700 <small>so‘m</small></div>
+      <p class="stat-note">Demo qiymat</p>
+    </article>
+  </div>
+
+  <div class="form-layout">
+    <section class="panel">
+      <div class="panel-head">
+        <div>
+          <h2>Yangi savdo</h2>
+          <p>Forma namoyish uchun tayyorlangan.</p>
+        </div>
+        <span class="pill">Demo forma</span>
+      </div>
+
+      <form class="form-grid" action="#" method="get">
+        <label for="product">Mahsulot nomi</label>
+        <select id="product" name="product">
+          <option>Olma</option>
+          <option>Kartoshka</option>
+          <option>Banan</option>
+          <option>Ko‘katlar</option>
+          <option>Asal</option>
+          <option>Sut</option>
+        </select>
+
+        <div class="form-row">
+          <div>
+            <label for="quantity">Miqdori</label>
+            <input id="quantity" name="quantity" type="number" min="1" placeholder="Masalan, 3">
+          </div>
+          <div>
+            <label for="unit">O‘lchov</label>
+            <select id="unit" name="unit">
+              <option>kg</option>
+              <option>dona</option>
+              <option>litr</option>
+              <option>bog‘</option>
+            </select>
+          </div>
+        </div>
+
+        <label for="price">Birlik narxi (so‘m)</label>
+        <input id="price" name="price" type="number" min="0" placeholder="Masalan, 12000">
+
+        <label for="payment">To‘lov turi</label>
+        <select id="payment" name="payment">
+          <option>Naqd pul</option>
+          <option>Bank kartasi</option>
+          <option>Elektron to‘lov</option>
+        </select>
+
+        <label for="notes">Izoh (ixtiyoriy)</label>
+        <textarea id="notes" name="notes" rows="3" placeholder="Savdo haqida izoh..."></textarea>
+
+        <button class="btn btn-primary full" type="button"
+          onclick="alert('Bu demo forma. Savdoni haqiqiy saqlash uchun JavaScript va ma’lumotlar bazasi kerak.')">
+          Savdoni saqlash
+        </button>
+        <p class="form-note">
+          Eslatma: bu tugma hozircha demo xabarini ko‘rsatadi, savdoni bazaga saqlamaydi.
+        </p>
+      </form>
+    </section>
+
+    <aside class="panel">
+      <div class="panel-head">
+        <div>
+          <h2>Savdo xulosasi</h2>
+          <p>Namunaviy ma’lumot</p>
+        </div>
+      </div>
+      <img class="summary-image"
+        src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=900&q=80"
+        alt="Do‘konda to‘lov jarayoni">
+      <div class="summary-row"><span>Bugungi tushum</span><strong>1 250 000 so‘m</strong></div>
+      <div class="summary-row"><span>Savdolar</span><strong>36 ta</strong></div>
+      <div class="summary-row"><span>Holat</span><strong class="stock">Demo ma’lumot</strong></div>
+
+      <a class="btn btn-secondary full" style="margin-top:18px" href="hisobot.html">
+        Hisobotni ko‘rish →
+      </a>
+
+      <div class="ai-box">
+        <span>✨</span>
+        <div>
+          <strong>Bozorchi AI tavsiyasi</strong>
+          <p>Ko‘p sotiladigan mahsulotlarni kuzatib, ombordagi zaxiralarni oldindan rejalashtiring.</p>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <section class="panel" style="margin-top:22px">
+    <div class="panel-head">
+      <div><h2>Oxirgi savdolar</h2><p>Misol tariqasidagi jadval.</p></div>
+    </div>
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr><th>Mahsulot</th><th>Miqdor</th><th>To‘lov</th><th>Summa</th><th>Holat</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Olma</td><td>3 kg</td><td>Naqd</td><td>36 000 so‘m</td><td><span class="stock">Demo</span></td></tr>
+          <tr><td>Kartoshka</td><td>5 kg</td><td>Karta</td><td>30 000 so‘m</td><td><span class="stock">Demo</span></td></tr>
+          <tr><td>Banan</td><td>2 kg</td><td>Naqd</td><td>44 000 so‘m</td><td><span class="stock">Demo</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
 </main>
-<footer><div class="container footer-row"><a class="logo" href="index.html">🟢 Bozorchi <span>AI</span></a><p>© 2026 Bozorchi AI</p></div></footer>
-</body></html>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <a class="brand" href="index.html">🛍️ Bozorchi <span class="brand-ai">AI</span></a>
+    <p>Kichik biznes uchun aqlli yordamchi.</p>
+    <small>© 2026 Bozorchi AI · Demo loyiha</small>
+  </div>
+</footer>
+</body>
+</html>
